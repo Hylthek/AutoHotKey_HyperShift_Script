@@ -17,19 +17,19 @@ RAlt up::
   SendInput("{RAlt up}") ; For safety.
 }
 
-global hotkey_inputs := [
+global hotkey_inputs := [ ; Place four keys per line for consistency.
   "*j", "*l", "*i", "*k",
   "*u", "*o", "*w", "*e",
   "*r", "*space", "*a", "*s",
   "*d", "*f"
-] ; 1-indexed, fyi
+] ; 1-indexed, fyi.
 
-global hotkey_outputs := [
+global hotkey_outputs := [ ; Place four keys per line for consistency.
   "{Left}", "{Right}", "{Up}", "{Down}",
   "{Home}", "{End}", "-", "{+}",
   "=", "_", "[", "]",
   "(", ")"
-] ; 1-indexed, fyi
+] ; 1-indexed, fyi.
 
 ; Function to set and toggle hotkeys.
 UpdateDynamicHotkeys(enable_hotkeys) {

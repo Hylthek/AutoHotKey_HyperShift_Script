@@ -2,7 +2,7 @@
 
 global hyper_shift_key_pressed := false
 
-RAlt::
+*RAlt::
 {
   global hyper_shift_key_pressed
   hyper_shift_key_pressed := true
@@ -12,7 +12,7 @@ RAlt::
 
   ; ToolTip("HyperShift on", 100, 100)
 }
-RAlt up::
+*RAlt up::
 {
   global hyper_shift_key_pressed
   hyper_shift_key_pressed := false

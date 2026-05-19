@@ -44,9 +44,6 @@ EnableDisableHotkeyRemapper(enable_hotkeys) {
 }
 
 HotkeyRemapper(hotkey_pressed) {
-  global hyper_shift_key_pressed
-  global remapper_input_keys, remapper_output_keys
-
   ; Assert that hypershift key is pressed.
   if (!hyper_shift_key_pressed)
   {

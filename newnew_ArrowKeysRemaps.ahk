@@ -21,14 +21,16 @@ global remapper_input_keys := [ ; Place four keys per line for consistency.
   "*j", "*l", "*i", "*k",
   "*u", "*o", "*w", "*e",
   "*r", "*space", "*a", "*s",
-  "*d", "*f"
+  "*d", "*f", "*c", "*v",
+  "*Backspace"
 ] ; 1-indexed, fyi.
 
 global remapper_output_keys := [ ; Place four keys per line for consistency.
   "{Left}", "{Right}", "{Up}", "{Down}",
   "{Home}", "{End}", "-", "{+}",
   "=", "_", "[", "]",
-  "(", ")"
+  "(", ")", "{", "}",
+  "{Delete}"
 ] ; 1-indexed, fyi.
 
 ; Function to set and toggle hotkeys.

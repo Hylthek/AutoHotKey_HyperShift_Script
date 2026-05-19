@@ -24,7 +24,7 @@ global remapper_input_keys := [ ; Place four keys per line for consistency.
   "*u", "*o", "*w", "*e",
   "*r", "*space", "*a", "*s",
   "*d", "*f", "*c", "*v",
-  "*Backspace", "*p", "*LButton", "*LButton Up",
+  "*Backspace", "*p", "*RButton", "*RButton Up",
 ] ; 1-indexed, fyi.
 
 global remapper_output_keys := [ ; Place four keys per line for consistency.

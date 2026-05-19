@@ -7,6 +7,7 @@ RAlt::
   global hyper_shift_key_pressed
   hyper_shift_key_pressed := true
   EnableDisableHotkeyRemapper(hyper_shift_key_pressed)
+  UnpressAllKeys()
   SendInput("{RAlt up}") ; For safety.
 }
 RAlt up::
@@ -14,6 +15,7 @@ RAlt up::
   global hyper_shift_key_pressed
   hyper_shift_key_pressed := false
   EnableDisableHotkeyRemapper(hyper_shift_key_pressed)
+  UnpressAllKeys()
   SendInput("{RAlt up}") ; For safety.
 }
 
@@ -22,16 +24,20 @@ global remapper_input_keys := [ ; Place four keys per line for consistency.
   "*u", "*o", "*w", "*e",
   "*r", "*space", "*a", "*s",
   "*d", "*f", "*c", "*v",
-  "*Backspace", "*p"
+  "*Backspace", "*p", "*LButton", "*LButton Up",
 ] ; 1-indexed, fyi.
 
 global remapper_output_keys := [ ; Place four keys per line for consistency.
   "{Left}", "{Right}", "{Up}", "{Down}",
   "{Home}", "{End}", "-", "{+}",
   "=", "_", "[", "]",
-  "(", ")", "{", "}",
-  "{Delete}", "{Media_Play_Pause}"
+  "(", ")", "{{}", "{}}",
+  "{Delete}", "{Media_Play_Pause}", "{MButton Down}", "{MButton Up}",
 ] ; 1-indexed, fyi.
+
+global unpress_keys := [
+  "{RAlt Up}", "{MButton Up}"
+]
 
 ; Function to set and toggle hotkeys.
 EnableDisableHotkeyRemapper(enable_hotkeys) {
@@ -78,4 +84,10 @@ HotkeyRemapper(hotkey_pressed) {
 
   ; Send the key with modifiers
   Send modifiers key
+}
+
+UnpressAllKeys() {
+  global remapper_input_keys
+  for key in unpress_keys
+    Send key
 }

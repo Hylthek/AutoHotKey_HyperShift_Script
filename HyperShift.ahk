@@ -9,6 +9,8 @@ RAlt::
   EnableDisableHotkeyRemapper(hyper_shift_key_pressed)
   UnpressAllKeys()
   SendInput("{RAlt up}") ; For safety.
+
+  ; ToolTip("HyperShift on", 100, 100)
 }
 RAlt up::
 {
@@ -17,6 +19,8 @@ RAlt up::
   EnableDisableHotkeyRemapper(hyper_shift_key_pressed)
   UnpressAllKeys()
   SendInput("{RAlt up}") ; For safety.
+
+  ; ToolTip("HyperShift off", 100, 100)
 }
 
 global remapper_input_keys := [ ; Place four keys per line for consistency.
@@ -84,6 +88,8 @@ HotkeyRemapper(hotkey_pressed) {
 
   ; Send the key with modifiers
   Send modifiers key
+
+  ; ToolTip("Key pressed " hotkey_pressed " remapped to " modifiers key, 100, 100)
 }
 
 UnpressAllKeys() {

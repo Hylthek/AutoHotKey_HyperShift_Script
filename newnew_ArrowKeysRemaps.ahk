@@ -66,11 +66,18 @@ HotkeyRemapper(hotkey_pressed) {
 
   ; Remap keys
   key := ""
+  num_trues := 0 ; Var explained later
   for idx, input in remapper_input_keys
     if (hotkey_pressed = input) { ; Guaranteed, 1 statement will be true.
       key := remapper_output_keys[idx]
+      num_trues++
     }
 
+  ; Check number of trues for debugging reasons.
+  if (num_trues = 0)
+    MsgBox("No hotkey matched the pressed key. This should never happen.")
+  else if (num_trues > 1)
+    MsgBox("Multiple hotkeys matched the pressed key. This should never happen.")
 
   ; Send the key with modifiers
   Send modifiers key

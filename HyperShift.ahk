@@ -22,7 +22,7 @@ global remapper_input_keys := [ ; Place four keys per line for consistency.
   "*u", "*o", "*w", "*e",
   "*r", "*space", "*a", "*s",
   "*d", "*f", "*c", "*v",
-  "*Backspace"
+  "*Backspace", "*p"
 ] ; 1-indexed, fyi.
 
 global remapper_output_keys := [ ; Place four keys per line for consistency.
@@ -30,7 +30,7 @@ global remapper_output_keys := [ ; Place four keys per line for consistency.
   "{Home}", "{End}", "-", "{+}",
   "=", "_", "[", "]",
   "(", ")", "{", "}",
-  "{Delete}"
+  "{Delete}", "{Media_Play_Pause}"
 ] ; 1-indexed, fyi.
 
 ; Function to set and toggle hotkeys.

@@ -3,3 +3,5 @@
 PgUp::Home
 PgDn::End
 PrintScreen::RAlt
+!,::^+Tab
+!.::^Tab
